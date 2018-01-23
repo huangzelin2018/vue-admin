@@ -47,7 +47,7 @@
                            :total="total" style="float:right;">
             </el-pagination>
         </el-col>
-        <add  ref="add"></add>
+        <add ref="mychild"></add>
     </section>
 </template>
 
@@ -87,6 +87,9 @@
                 this.page = val;
                 this.getUsers();
             },
+            handleAdd(){
+                this.$refs.mychild.handleAdd();
+            }
         },
         mounted() {
             this.getUsers();
